@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@400&display=swap');
+
+body {
+   color: #ddd;
+   background-color: #141414;
+   overflow-y: scroll;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 16px;
+}
+
+span{
+   display:inline-block;
+   margin: 0;
+   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+   color: #ddd !important;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   color: #ddd;
+   text-decoration: underline;
+}
+
+a:hover {
+   color: #1F6FEB;
+}
+
+/* <--Header--> */
+pre svg {
+   width: 14;
+   height: 14;
+   fill: none;
+   stroke: #ddd;
+   stroke-width: 2;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+}
+
+/* <--Preloader--> */
+.preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #141414;
+   z-index: 600
+}
+
+/* <--pre--> */
+pre {
+   margin:0;
+   overflow-x:hidden;
+   background-color: #141414;
+   color: #ddd;
+}
+
+.frame {
+   display:table;
+   margin:16px auto
+}
+
+/* <--Nav section--> */
+a.nav-item {
+	color: #ddd;
+}
+
+a.nav-item:hover {
+   color: #1F6FEB;
+}
+
+.nav-item svg:hover {
+   stroke: #1F6FEB;
+}
+
+
+/* <--Adaptive shizzle--> */
+@media(max-width:999px) {
+   .frame {
+      display:block;
+      font-size:1.94vw;
+   }
+
+   pre svg {
+      width: 1.94vw;
+      height: 1.94vw;
+      fill: none;
+      stroke: #ddd;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+   }
+}
+
+/* <--Center content on mobile devices--> */
+.mobile-fix {
+   display: table;
+   margin:16px auto;
+}
