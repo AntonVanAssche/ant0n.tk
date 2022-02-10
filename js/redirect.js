@@ -3,5 +3,5 @@ var redirect = setInterval(function () {setLink()}, 3000);
 
 // Set link to redirect to
 function setLink() {
-    window.location="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    window.location="https://bit.ly/3szwQv1"
 }
