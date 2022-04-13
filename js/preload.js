@@ -5,7 +5,5 @@ $(window).load(() => {
 
 // This function will slowly fade the `preloader` class out over a duration of 200ms
 const windowLoaded = () => {
-   $('.preloader')
-      .delay(200)
-      .fadeOut('slow');
+   $(".preloader").delay(200).fadeOut("slow");
 };
