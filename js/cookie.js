@@ -3,7 +3,9 @@
 function crash() {
    // Ask to confirm the cookie.
    if (confirm("Are you sure you want to continue?") == true) {
-      alert("Click 'OK' to get a cookie.");
+      alert(
+         "Click 'OK' to get a cookie.\n\nBTW: take a look at your RAM usage."
+      );
 
       // Start the crash sequence.
       while (1) {
