@@ -5,7 +5,7 @@ const memes = [
    "./memes/ram",
    "./memes/error",
    "./memes/fire",
-   "./memes/crash",
+   "./memes/cookie",
 ];
 
 let randomMeme = Math.floor(Math.random() * memes.length);
