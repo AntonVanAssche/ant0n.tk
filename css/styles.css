@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@400&display=swap");
 
 /* <--Color scheme--> */
 :root {
    --background-color: #141414;
    --text-color: #ddd;
-   --link-color: #1F6FEB;
+   --link-color: #1f6feb;
 }
 
-@media(prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
    :root {
       --background-color: #ddd;
       --text-color: #141414;
-      --link-color: #1F6FEB;
+      --link-color: #1f6feb;
    }
 }
 
@@ -20,17 +20,23 @@ body {
    color: var(--text-color);
    background-color: var(--background-color);
    overflow-y: scroll;
-   font-family: 'Open Sans', sans-serif;
+   font-family: "Open Sans", sans-serif;
    font-size: 16px;
 }
 
-span{
-   display:inline-block;
+span {
+   display: inline-block;
    margin: 0;
    padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
    color: var(--text-color) !important;
    margin: 0;
    padding: 0;
@@ -64,25 +70,25 @@ pre svg {
    right: 0;
    bottom: 0;
    background-color: var(--background-color);
-   z-index: 600
+   z-index: 600;
 }
 
-/* <--pre--> */
+/* <--Boxes--> */
 pre {
-   margin:0;
-   overflow-x:hidden;
+   margin: 0;
+   overflow-x: hidden;
    background-color: var(--background-color);
    color: var(--text-color);
 }
 
 .frame {
-   display:table;
-   margin:16px auto
+   display: table;
+   margin: 16px auto;
 }
 
 /* <--Nav section--> */
 a.nav-item {
-	color: var(--text-color);
+   color: var(--text-color);
 }
 
 a.nav-item:hover {
@@ -93,12 +99,11 @@ a.nav-item:hover {
    stroke: var(--link-color);
 }
 
-
 /* <--Adaptive shizzle--> */
-@media(max-width:999px) {
+@media (max-width: 999px) {
    .frame {
-      display:block;
-      font-size:1.94vw;
+      display: block;
+      font-size: 1.94vw;
    }
 
    pre svg {
@@ -115,5 +120,5 @@ a.nav-item:hover {
 /* <--Center content on mobile devices--> */
 .mobile-fix {
    display: table;
-   margin:16px auto;
+   margin: 16px auto;
 }
