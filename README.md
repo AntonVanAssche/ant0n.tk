@@ -12,4 +12,4 @@
 
 Here you can find links to some of my projects as I slowly learn about writing code.
 
-This website is build with simplicity in mind. It is mainly intended to learn a bit more about `JavaScript`, `html` and `css`.
+This website is mainly intended to learn a bit more about `JavaScript`, `html` and `css`.

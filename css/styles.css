@@ -2,40 +2,81 @@
 
 /* <--Color scheme--> */
 :root {
+   /* <--General scheme--> */
    --background-color: #141414;
    --text-color: #ddd;
    --link-color: #1f6feb;
+
+   /* <--Color code snippets--> */
+   --code-background-color: #ddd;
+   --code-color: #1f6feb;
+
+   --nav-background-color: #222222;
+
+   --button-background-color-onhover: #c3c3c3;
 }
 
-@media (prefers-color-scheme: light) {
-   :root {
-      --background-color: #ddd;
-      --text-color: #141414;
-      --link-color: #1f6feb;
-   }
-}
-
-/* <--Body--> */
 body {
    color: var(--text-color);
    background-color: var(--background-color);
    overflow-y: scroll;
    font-family: "Open Sans", sans-serif;
    font-size: 16px;
+   display: grid;
+   grid-template-rows: 1fr auto;
+   min-height: 100%;
 }
 
-span {
-   display: inline-block;
-   margin: 0;
-   padding: 0;
+html,
+body {
+   height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+body {
+   display: flex;
+   flex-direction: column;
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+}
+
+main {
+   flex-grow: 1;
+}
+
+blockquote {
+   margin-top: 2rem;
+   color: var(--text-color);
+   font-family: -apple-system, sans-serif;
+   margin-bottom: 1rem;
+   font-family: "Montserrat";
+   font-size: 28px;
+   border-left: none;
+}
+
+blockquote::before {
+   margin-left: -0.4em;
+   content: "\201C";
+   font-family: Arial, sans-serif;
+   font-size: 28px;
+}
+
+hr {
+   margin-top: 3em;
+   margin-bottom: 3em;
+   border-width: 3px;
+   border-color: var(--text-color) !important;
+}
+
+svg {
+   width: 14;
+   height: 14;
+   fill: none;
+   stroke: var(--text-color);
+   stroke-width: 2;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+}
+
 p {
    color: var(--text-color) !important;
    margin: 0;
@@ -51,15 +92,22 @@ a:hover {
    color: var(--link-color);
 }
 
-/* <--Header--> */
-pre svg {
-   width: 14;
-   height: 14;
-   fill: none;
-   stroke: var(--text-color);
-   stroke-width: 2;
-   stroke-linecap: round;
-   stroke-linejoin: round;
+a:hover svg {
+   stroke: var(--link-color);
+}
+
+button:hover svg {
+   stroke: var(--link-color);
+}
+
+.icon {
+   margin: 1rem;
+}
+
+/* <--Code snippets--> */
+.code {
+   color: var(--code-color);
+   background-color: var(--code-background-color);
 }
 
 /* <--Preloader--> */
@@ -73,52 +121,54 @@ pre svg {
    z-index: 600;
 }
 
-/* <--Boxes--> */
-pre {
-   margin: 0;
-   overflow-x: hidden;
-   background-color: var(--background-color);
-   color: var(--text-color);
+/* <--Navigation--> */
+.navbar {
+   color: var(--text-color) !important;
 }
 
-.frame {
-   display: table;
-   margin: 16px auto;
+.navbar {
+   border-radius: 0px;
+   background-color: var(--nav-background-color) !important;
 }
 
-/* <--Nav section--> */
-a.nav-item {
-   color: var(--text-color);
+.navbar .active {
+   background-color: var(--background-color) !important;
 }
 
-a.nav-item:hover {
-   color: var(--link-color);
+.navbar a {
+   text-decoration: underline !important;
+   color: var(--text-color) !important;
 }
 
-.nav-item svg:hover {
-   stroke: var(--link-color);
+.navbar a:hover {
+   color: var(--link-color) !important;
+   text-decoration: underline !important;
 }
 
-/* <--Adaptive shizzle--> */
-@media (max-width: 999px) {
-   .frame {
-      display: block;
-      font-size: 1.94vw;
-   }
-
-   pre svg {
-      width: 1.94vw;
-      height: 1.94vw;
-      fill: none;
-      stroke: var(--text-color);
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-   }
+.navbar svg:hover {
+   stroke: var(--link-color) !important;
 }
 
-/* <--Center content on mobile devices--> */
-.mobile-fix {
-   display: table;
-   margin: 16px auto;
+.dropdown-menu {
+   background-color: var(--nav-background-color) !important;
+   color: var(--text-color) !important;
+}
+
+.dropdown-menu a:hover {
+   border-radius: 5px;
+   background-color: var(--background-color) !important;
+}
+
+/* <--Footer--> */
+footer,
+footer a {
+   color: var(--text-color) !important;
+}
+
+footer a:hover {
+   color: var(--link-color) !important;
+}
+
+.text_align_center {
+   text-align: center;
 }
