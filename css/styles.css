@@ -36,6 +36,8 @@ body {
    flex-direction: column;
    display: grid;
    grid-template-rows: auto 1fr auto;
+   margin: 0;
+   padding: 0;
 }
 
 main {
@@ -159,6 +161,13 @@ button:hover svg {
 }
 
 /* <--Footer--> */
+footer {
+   color: var(--text-color) !important;
+   background-color: var(--nav-background-color) !important;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+
 footer,
 footer a {
    color: var(--text-color) !important;
