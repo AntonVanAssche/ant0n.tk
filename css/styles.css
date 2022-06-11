@@ -236,8 +236,8 @@ img.zoom-img {
    cursor: pointer;
    z-index: 100;
    border: 2px var(--text-color) solid;
-   bottom: 5rem;
-   right: 5rem;
+   bottom: 7.5rem;
+   right: 7.5rem;
 }
 
 .back-to-top:hover {
