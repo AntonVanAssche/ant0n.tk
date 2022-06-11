@@ -14,6 +14,36 @@
    --button-background-color-action: #080808;
 }
 
+/* <--Chrome, Safari scrollbar--> */
+::-webkit-scrollbar {
+   width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+   background: var(--nav-background-color);
+   padding: 0;
+   margin: 0;
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--text-color);
+   border: 0.125em var(--nav-background-color) solid;
+   border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: var(--link-color);
+}
+
+/* <-Firefox scrollbar--> */
+/* Firefox doesn't support ::-webkit-scrollbar */
+@supports (scrollbar-color: var(--text-color) var(--nav-background-color)) {
+   * {
+      scrollbar-color: var(--text-color) var(--nav-background-color);
+      scrollbar-width: 0.5em;
+   }
+}
+
 body {
    color: var(--text-color);
    background-color: var(--background-color);
