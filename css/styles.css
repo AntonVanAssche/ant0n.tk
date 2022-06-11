@@ -11,7 +11,7 @@
 
    --nav-background-color: #222222;
 
-   --button-background-color-onhover: #c3c3c3;
+   --button-background-color-action: #080808;
 }
 
 body {
@@ -241,7 +241,7 @@ img.zoom-img {
 }
 
 .back-to-top:hover {
-   /* opacity: 0.5; */
    stroke: var(--link-color);
    border-color: var(--link-color);
+   background-color: var(--button-background-color-action);
 }
