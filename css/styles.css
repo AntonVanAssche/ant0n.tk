@@ -290,12 +290,15 @@ img.zoom-img {
    position: fixed;
    border-radius: 50%;
    background-color: var(--background-color);
-   align-content: center;
    cursor: pointer;
    z-index: 100;
    border: 2px var(--text-color) solid;
    bottom: 7.5rem;
    right: 7.5rem;
+   display: grid;
+   place-items: center;
+   width: 40px;
+   height: 40px;
 }
 
 .back-to-top:hover {
@@ -309,12 +312,15 @@ img.zoom-img {
    position: fixed;
    border-radius: 50%;
    background-color: var(--background-color);
-   align-content: center;
    cursor: pointer;
    z-index: 100;
    border: 2px var(--text-color) solid;
    bottom: 7.5rem;
    right: 2.5rem;
+   display: grid;
+   place-items: center;
+   width: 40px;
+   height: 40px;
 }
 
 .darkmode-toggle:hover {
