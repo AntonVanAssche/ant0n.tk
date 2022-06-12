@@ -11,10 +11,10 @@ const memes = [
 
 let randomMeme = Math.floor(Math.random() * memes.length);
 
-// Redirect to the page set in `setLink()` after 1000ms
+// Redirect to the page set in `setLink()` after 2000ms
 const redirect = setInterval(function () {
    setLink();
-}, 3000);
+}, 2000);
 
 // Set link to redirect to
 function setLink() {
