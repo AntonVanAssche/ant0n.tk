@@ -1,10 +1,8 @@
 "Use strict";
 
-let audio = new Audio("./sound/windows-error.mp3");
-
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 100; i++) {
    setTimeout(() => {
-      audio.play();
+      new Audio("/audio/windows-error.mp3").play();
       alert("OH NO IT LOOKS LIKE AN ERROR OCCURRED");
    }, 1000);
 }
