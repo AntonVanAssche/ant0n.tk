@@ -1,3 +1,5 @@
+"use strict"
+
 // Define a list with all project pages.
 const projects = [
    { page: "/projects/bashpass.html", name: "BashPass" },
