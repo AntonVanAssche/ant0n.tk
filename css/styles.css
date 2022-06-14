@@ -58,6 +58,12 @@
    }
 }
 
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
 body {
    color: var(--text-color);
    background-color: var(--background-color);
@@ -147,6 +153,10 @@ button:hover svg {
 
 .icon {
    margin: 1rem;
+}
+
+ul {
+   margin-left: 20px;
 }
 
 /* <--Code snippets--> */
@@ -340,4 +350,19 @@ img.zoom-img {
       bottom: 7.5rem;
       right: 2.5rem;
    }
+}
+
+/* <--About page blob shape--> */
+.blob {
+   border-radius: 54% 46% 59% 41% / 61% 27% 73% 39%;
+   transition: all 0.5s ease-in-out;
+}
+
+.blob:hover {
+   border-radius: 42% 58% 44% 56% / 46% 40% 60% 54%;
+}
+
+.penguin-animation {
+   margin: 0 auto;
+   width: 50%;
 }
