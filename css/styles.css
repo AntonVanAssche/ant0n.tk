@@ -90,6 +90,10 @@ body {
    padding: 0;
 }
 
+header {
+   z-index: 100;
+}
+
 main {
    flex-grow: 1;
 }
@@ -365,4 +369,28 @@ img.zoom-img {
 .penguin-animation {
    margin: 0 auto;
    width: 50%;
+}
+
+/* <--Fire page mouse tracking--> */
+.fire {
+   position: fixed;
+   z-index: 1;
+   display: flex;
+   flex-wrap: wrap;
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+}
+
+.fire-item {
+   font-size: 26px;
+   height: 60px;
+   width: 60px;
+   opacity: 0;
+   transition: opacity 2s ease 0.4s;
+}
+ 
+.fire-item:hover {
+   opacity: 1;
+   transition: opacity 0.2s ease;
 }
