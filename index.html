@@ -1,212 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>👋 Hi!</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1" />
-      <link
-         rel="stylesheet"
-         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-      />
-      <link rel="stylesheet" href="./css/styles.css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   </head>
-   <body id="top">
-      <div class="preloader"></div>
-      <header>
-         <nav id="nav" class="navbar navbar-inverse">
-            <div class="container-fluid">
-               <div class="navbar-header">
-                  <button
-                     type="button"
-                     class="navbar-toggle"
-                     data-toggle="collapse"
-                     data-target="#myNavbar"
-                  >
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                  </button>
-                  <span class="navbar-brand"
-                     ><a
-                        href="https://github.com/AntonVanAssche"
-                        target="_blank"
-                        class="icon"
-                        ><svg
-                           width="14"
-                           height="14"
-                           viewBox="0 0 24 24"
-                           class="feather feather-gitlab"
+    <head>
+        <title>Hi! How are you?</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>👋undefined</text></svg>">
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body id="top">
+        <main>
+            <section id="greetings">
+                <div class="content-wrapper">
+                    <p class="lead typewriter" id="typewriter">
+                        <span class="wave">👋</span>
+                        Hi, I'm <span class="greetings-name">Anton</span>,
+                    </p>
+                    <div class="social-icons">
+                        <div>
+                            <a
+                                href="https://github.com/AntonVanAssche"
+                                target="_blank"
+                                class="social-icon"
+                                ><svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    class="feather feather-gitlab"
+                                >
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                                    ></path></svg
+                            ></a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://gitlab.com/AntonVanAssche"
+                                target="_blank"
+                                class="social-icon"
+                                ><svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    class="feather feather-gitlab"
+                                >
+                                    <path
+                                        d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"
+                                    ></path></svg
+                            ></a>
+                        </div>
+                        <!--Just here so I can uncomment it later when I finally get a LinkedIn account 😅-->
+                        <!-- <div> -->
+                        <!--     <a -->
+                        <!--         href="https://linkedin.com/in/AntonVanAssche" -->
+                        <!--         target="_blank" -->
+                        <!--         class="social-icon" -->
+                        <!--     > -->
+                        <!--         <svg -->
+                        <!--             width="24" -->
+                        <!--             height="24" -->
+                        <!--             viewBox="0 0 24 24" -->
+                        <!--             class="feather feather-linkedin" -->
+                        <!--         > -->
+                        <!--             <path -->
+                        <!--                 d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" -->
+                        <!--             ></path> -->
+                        <!--             <rect -->
+                        <!--                 x="2" -->
+                        <!--                 y="9" -->
+                        <!--                 width="4" -->
+                        <!--                 height="12" -->
+                        <!--             ></rect> -->
+                        <!--             <circle cx="4" cy="4" r="2"></circle> -->
+                        <!--         </svg> -->
+                        <!--     </a> -->
+                        <!-- </div> -->
+                        <div>
+                            <a
+                                href="mailto:vanasscheanton@duck.com"
+                                target="_blank"
+                                class="social-icon"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    class="feather feather-mail"
+                                >
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    ></path>
+                                    <polyline
+                                        points="22,6 12,13 2,6"
+                                    ></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="indicator"></div>
+                </div>
+            </section>
+            <section id="about">
+                <div class="content-wrapper">
+                    <div class="about">
+                        <h2 class="section-title">About me</h2>
+                        <div class="about-left">
+                            <p>
+                                Hey there! My name is
+                                <strong>Anton Van Assche</strong> and I'm
+                                currently a <strong>student</strong> at the
+                                Ghent University of Applied Sciences and Arts,
+                                where I'm studying
+                                <strong>Applied Information Technology</strong>
+                                specialising in System and Network
+                                administration.
+                            </p>
+                            <p style="margin-top: 1em">
+                                As a student, I'm constantly trying to improve
+                                my skills. I'm a big proponent of
+                                <strong>open-source</strong> technology and use
+                                <a href="https://getfedora.org/" target="_blank"
+                                    ><strong>Fedora Linux</strong></a
+                                >
+                                (<a
+                                    href="https://github.com/AntonVanAssche/Dotfiles"
+                                    target="_blank"
+                                    >dotfiles</a
+                                >) and
+                                <a href="https://neovim.io/" target="_blank"
+                                    ><strong>Neovim</strong></a
+                                >
+                                (yes this ugly creation was made within it 😅)
+                                in my daily work.. But (unfortunately) I also
+                                use Windows mainly for gaming (We got to destroy
+                                those n00bs in Call of Duty right? 😏) and some
+                                school related stuff.
+                            </p>
+                            <p style="margin-top: 1em">
+                                In my free time, I like to experiment with my
+                                Linux system (yes this means breaking and
+                                reinstalling it, since I'm too
+                                <strong><del>lazy</del></strong> to read the
+                                logs) and work on personal projects. Most of
+                                these projects are open-source, so you're always
+                                welcome to contribute to them.
+                            </p>
+                            <p style="margin-top: 1em">
+                                Another hobby of mine is
+                                <a href="https://fie.org/" target="_blank"
+                                    ><strong>fencing</strong></a
+                                >
+                                (<a
+                                    href="https://fie.org/new-to-fencing/weapons#epee"
+                                    target="_blank"
+                                    >Épée</a
+                                >), meaning I get to stab people for
+                                <strong>FUN</strong> 😅! I've been doing this
+                                for 10 years now (yes I'm that
+                                <strong><del>OLD</del> YOUNG</strong>) and I
+                                still love it. I don't compete in any
+                                tournaments at the moment, but I do train twice
+                                a week with my club. I might start competing
+                                again in some (regional) tournaments the future,
+                                but for now I'm just enjoying the sport and the
+                                people I meet through it.
+                                <strong>Sooo engarde 🤺!</strong>
+                            </p>
+                            <!-- <p style="margin-top: 1em"> -->
+                            <!--     I also hold a -->
+                            <!--     <a -->
+                            <!--         href="https://www.credly.com/badges/9ee8cf32-505d-474f-8210-285248b698d0/public_url" -->
+                            <!--         target="_blank" -->
+                            <!--         >Cisco Networking Academy Cybersecurity -->
+                            <!--         Essentials certification</a -->
+                            <!--     >, which I received for completing and passing -->
+                            <!--     the exam. I know it's not the most impressive -->
+                            <!--     certification out there, but I'm proud of it -->
+                            <!--     nonetheless! -->
+                            <!-- </p> -->
+                            <p style="margin-top: 1em">
+                                Oh and before I forget, don't forget to check
+                                out the amazing
+                                <a href="./404.html" target="_blank">404 page</a
+                                >! There might be something that will make you
+                                laugh 😂.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="content-wrapper">
+                    <div class="projects">
+                        <h2 class="section-title">Projects</h2>
+                        <p>
+                            I find it rather useless to have them listed here
+                            (definitely not because I'm too lazy to add them
+                            here 😅), so I'll just link you to my
+                            <a
+                                href="https://github.com/AntonVanAssche"
+                                target="_blank"
+                                >GitHub</a
+                            >
+                            profile. Here you can find all my projects,
+                            including the <strong><del>shitty</del></strong
+                            >, euhm, I mean the most
+                            <strong>awesome</strong> projects in the world
+                            you'll ever see (I'm not biased at all 😏).
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="content-wrapper">
+                    <div class="contact">
+                        <h2 class="section-title">Contact</h2>
+                        <p>Wanna talk about something?</p>
+                        <p>Or just want to say hi?</p>
+                        <p>Feel free to contact me!</p>
+                        <div class="social-icons">
+                            <div>
+                                <a
+                                    href="https://github.com/AntonVanAssche"
+                                    target="_blank"
+                                    class="social-icon"
+                                    ><svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        class="feather feather-gitlab"
+                                    >
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                                        ></path></svg
+                                ></a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://gitlab.com/AntonVanAssche"
+                                    target="_blank"
+                                    class="social-icon"
+                                    ><svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        class="feather feather-gitlab"
+                                    >
+                                        <path
+                                            d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"
+                                        ></path></svg
+                                ></a>
+                            </div>
+                            <!--Just here so I can uncomment it later when I finally get a LinkedIn account 😅-->
+                            <!-- <div> -->
+                            <!--     <a -->
+                            <!--         href="https://linkedin.com/in/AntonVanAssche" -->
+                            <!--         target="_blank" -->
+                            <!--         class="social-icon" -->
+                            <!--     > -->
+                            <!--         <svg -->
+                            <!--             width="24" -->
+                            <!--             height="24" -->
+                            <!--             viewBox="0 0 24 24" -->
+                            <!--             class="feather feather-linkedin" -->
+                            <!--         > -->
+                            <!--             <path -->
+                            <!--                 d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" -->
+                            <!--             ></path> -->
+                            <!--             <rect -->
+                            <!--                 x="2" -->
+                            <!--                 y="9" -->
+                            <!--                 width="4" -->
+                            <!--                 height="12" -->
+                            <!--             ></rect> -->
+                            <!--             <circle cx="4" cy="4" r="2"></circle> -->
+                            <!--         </svg> -->
+                            <!--     </a> -->
+                            <!-- </div> -->
+                            <div>
+                                <a
+                                    href="mailto:vanasscheanton@duck.com"
+                                    target="_blank"
+                                    class="social-icon"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        class="feather feather-mail"
+                                    >
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        ></path>
+                                        <polyline
+                                            points="22,6 12,13 2,6"
+                                        ></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="bored">
+                <div class="content-wrapper">
+                    <div class="counter">
+                        <h2 class="section-title">Bored?</h2>
+                        <button
+                            id="bored-button"
                         >
-                           <path
-                              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                           ></path></svg
-                     ></a>
-                     <a
-                        href="https://gitlab.com/AntonVanAssche"
-                        target="_blank"
-                        class="icon"
+                            Click Me!
+                        </button>
+                        <h3 id="count"></h3>
+                    </div>
+                </div>
+            </section>
+            <div>
+                <button type="button" class="back-to-top">
+                    <a href="#top"
                         ><svg
-                           width="14"
-                           height="14"
-                           viewBox="0 0 24 24"
-                           class="feather feather-gitlab"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            class="feather feather-arrow-up"
                         >
-                           <path
-                              d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"
-                           ></path></svg></a
-                  ></span>
-               </div>
-               <div class="collapse navbar-collapse" id="myNavbar">
-                  <ul class="nav navbar-nav">
-                     <li class="active"><a href="./index.html">Home</a></li>
-                     <li><a href="./about.html">About</a></li>
-                     <li class="dropdown">
-                        <a
-                           class="dropdown-toggle"
-                           data-toggle="dropdown"
-                           href="#"
-                           >Projects <span class="caret"></span
-                        ></a>
-                        <ul class="dropdown-menu" id="project-list">
-                           <!-- List will be generated automatically using the project-list.js file. -->
-                        </ul>
-                     </li>
-                  </ul>
-               </div>
+                            <line x1="12" y1="19" x2="12" y2="5"></line>
+                            <polyline points="5 12 12 5 19 12"></polyline></svg
+                    ></a>
+                </button>
+                <button
+                    type="button"
+                    class="darkmode-toggle"
+                    id="darkmode-toggle"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        class="feather feather-sun"
+                    >
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line
+                            x1="18.36"
+                            y1="18.36"
+                            x2="19.78"
+                            y2="19.78"
+                        ></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
             </div>
-         </nav>
-      </header>
-      <main>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <hr />
-               </div>
-            </div>
-         </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12" align="center">
-                  <blockquote>
-                     People who are doing things for fun, do things the right
-                     way by themselves.
-                  </blockquote>
-                  <div align="right">
-                     <cite
-                        >-
-                        <a
-                           href="https://en.wikipedia.org/wiki/linus_torvalds"
-                           target="_blank"
-                           >Linus Torvalds</a
-                        ></cite
-                     >
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <hr />
-               </div>
-            </div>
-         </div>
-         <div align="center">
-            <span>
-               <a href="./redirect.html">
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     width="14"
-                     height="14"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke-width="2"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     class="feather feather-arrow-right"
-                  >
-                     <line x1="5" y1="12" x2="19" y2="12"></line>
-                     <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                  DON'T CLICK THIS!
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     width="14"
-                     height="14"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke-width="2"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     class="feather feather-arrow-left"
-                  >
-                     <line x1="19" y1="12" x2="5" y2="12"></line>
-                     <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg>
-               </a>
-            </span>
-         </div>
-         <div>
-            <button type="button" class="darkmode-toggle" id="darkmode-toggle">
-               <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-sun"
-               >
-                  <circle cx="12" cy="12" r="5"></circle>
-                  <line x1="12" y1="1" x2="12" y2="3"></line>
-                  <line x1="12" y1="21" x2="12" y2="23"></line>
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                  <line x1="1" y1="12" x2="3" y2="12"></line>
-                  <line x1="21" y1="12" x2="23" y2="12"></line>
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-               </svg>
-            </button>
-            <button type="button" class="back-to-top">
-               <a href="#top"
-                  ><svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     width="24"
-                     height="24"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke-width="2"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     class="feather feather-arrow-up"
-                  >
-                     <line x1="12" y1="19" x2="12" y2="5"></line>
-                     <polyline points="5 12 12 5 19 12"></polyline></svg
-               ></a>
-            </button>
-         </div>
-      </main>
-      <footer>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12 text_align_center">
-                  <p>
-                     The source code of this website can be found on
-                     <a href="https://github.com/AntonVanAssche/ant0n.tk"
-                        >GitHub</a
-                     >.
-                  </p>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script src="./js/main.js"></script>
-      <script src="./js/zoom.js"></script>
-   </body>
+        </main>
+        <footer>
+            <p>
+                © 2022
+                <a href="https://github.com/AntonVanAssche/">Anton Van Assche</a
+                >.
+            </p>
+        </footer>
+        <script src="./js/theme.js"></script>
+        <script src="./js/bored.js"></script>
+    </body>
 </html>
