@@ -458,6 +458,11 @@ button:hover svg {
         width: 80%;
     }
 
+    .joke .joke-content {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
     .counter {
         width: 80%;
     }
