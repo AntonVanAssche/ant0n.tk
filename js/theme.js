@@ -22,8 +22,16 @@ const unsetDarkMode = () => {
     localStorage.setItem("darkMode", "disabled");
 };
 
-const updateButton = (isDarkMode) => {
-    if (isDarkMode) {
+const updateButton = () => {
+    // Get the current dark mode setting.
+    let darkMode = localStorage.getItem("darkMode");
+    // Get the user's system preference.
+    let prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    // Check if dark mode is enabled.
+    if (
+        darkMode === "enabled" ||
+        (darkMode === "system" && prefersDarkScheme.matches)
+    ) {
         darkModeToggle.innerHTML = lightModeImg;
     } else {
         darkModeToggle.innerHTML = darkModeImg;
@@ -31,36 +39,66 @@ const updateButton = (isDarkMode) => {
 };
 
 darkModeToggle.addEventListener("click", () => {
+    // Read the saved 'darkMode' in localStorage.
     let darkMode = localStorage.getItem("darkMode");
-    if (darkMode === "disabled") {
+
+    // Get the users system preference.
+    let prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (
+        darkMode === "disabled" ||
+        (darkMode === "system" && !prefersDarkScheme.matches)
+    ) {
         setDarkMode();
-        updateButton(true);
-        // Since we only want the sound effect to play once
-        // when the user clicks the button, we play it here instead
-        // of in the `(un)setDarkMode` function.
+        updateButton();
         playSound("dark");
     } else {
         unsetDarkMode();
-        updateButton(false);
+        updateButton();
         playSound("light");
     }
 });
 
 const init = () => {
-    // Check for saved 'darkMode' in localStorage.
+    // Read the saved 'darkMode' in localStorage.
     let darkMode = localStorage.getItem("darkMode");
 
-    // Use dark mode if the user hasn't visited the site before or
-    // when no preference is saved.
-    // When the user visits the site before, and has disabled dark mode,
-    // enable light mode.
-    if (darkMode !== "enabled") {
-        unsetDarkMode();
-        updateButton(false);
-    } else {
-        setDarkMode();
-        updateButton(true);
+    // Get the users system preference.
+    let prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    // If the user hasn't visited the site before, check their system preference.
+    if (darkMode === null) {
+        darkMode = prefersDarkScheme.matches ? "system" : "disabled";
+    }
+
+    // Set the theme based on the value of 'darkMode'.
+    switch (darkMode) {
+        case "enabled":
+            setDarkMode();
+            break;
+        case "disabled":
+            unsetDarkMode();
+            break;
+        case "system":
+            if (prefersDarkScheme.matches) {
+                setDarkMode();
+            } else {
+                unsetDarkMode();
+            }
+            localStorage.setItem("darkMode", "system");
+            break;
     }
 };
 
 window.onload = init;
+
+// When the user changes their system preference, update the theme.
+window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+        let darkMode = localStorage.getItem("darkMode");
+        if (darkMode === "system") {
+            e.matches ? setDarkMode() : unsetDarkMode();
+            updateButton();
+        }
+    });
