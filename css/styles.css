@@ -128,8 +128,8 @@ button:hover svg {
     cursor: pointer;
     z-index: 100;
     border: 2px var(--text-color) solid;
-    bottom: 5em;
-    right: 5em;
+    bottom: 5rem;
+    right: 5rem;
     display: grid;
     place-items: center;
     width: 40px;
@@ -150,8 +150,8 @@ button:hover svg {
     cursor: pointer;
     z-index: 100;
     border: 2px var(--text-color) solid;
-    bottom: 5em;
-    right: 2em;
+    bottom: 5rem;
+    right: 2rem;
     display: grid;
     place-items: center;
     width: 40px;
@@ -167,13 +167,13 @@ button:hover svg {
 /* <--Adaptive button position--> */
 @media (max-width: 992px) {
     .back-to-top {
-        bottom: 8em;
-        right: 2em;
+        bottom: 8rem;
+        right: 2rem;
     }
 
     .darkmode-toggle {
-        bottom: 5em;
-        right: 2em;
+        bottom: 5rem;
+        right: 2rem;
     }
 }
 
