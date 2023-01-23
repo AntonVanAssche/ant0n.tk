@@ -9,11 +9,19 @@ const playHitmarkerSound = async () => {
     audio.play();
 };
 
+// Open a new tab and play Never Gonna Give You Up.
+const rickRoll = () => {
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+};
+
 const countUp = () => {
     count++;
 
     // Construct the message to display.
-    let message = "You have clicked the button " + count + ((count > 1) ? " times." : " time.");
+    let message =
+        "You have clicked the button " +
+        count +
+        (count > 1 ? " times." : " time.");
 
     // Display the count on the page.
     document.getElementById("count").innerText = message;
@@ -23,7 +31,18 @@ const countUp = () => {
 
     // Save the count in localStorage.
     localStorage.setItem("count", count);
-}
+
+    // If the count is divisible by 69, rick roll the user.
+    if (count % 69 === 0) {
+        rickRoll();
+    }
+
+    // Add the a small chance of rick rolling the user.
+    // This is to prevent the user from getting bored.
+    // if (Math.random() < 0.1) {
+    //     rickRoll();
+    // }
+};
 
 // Event listener for the button
 document.getElementById("bored-button").addEventListener("click", countUp);
