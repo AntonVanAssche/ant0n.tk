@@ -19,9 +19,11 @@ const countUp = () => {
 
     // Construct the message to display.
     let message =
-        "You have clicked the button " +
-        count +
-        (count > 1 ? " times." : " time.");
+        count % 69 === 0
+            ? `Get rick rolled!`
+            : "You have clicked the button " +
+              count +
+              (count > 1 ? " times." : " time.");
 
     // Display the count on the page.
     document.getElementById("count").innerText = message;
