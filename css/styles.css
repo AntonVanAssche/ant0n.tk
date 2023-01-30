@@ -218,6 +218,10 @@ button:hover svg {
     }
 }
 
+.scroll-down-button {
+    border: none;
+}
+
 /* <--Content/Sections--> */
 .content-wrapper {
     display: flex;
