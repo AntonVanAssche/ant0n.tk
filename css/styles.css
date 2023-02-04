@@ -229,7 +229,8 @@ button:hover svg {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 200vh;
 }
 
 .section-title {
@@ -329,7 +330,7 @@ button:hover svg {
     justify-content: center;
     align-items: center;
     width: 50%;
-    max-height: 100vh;
+    max-height: 100%;
 }
 
 .about-left {
@@ -345,7 +346,7 @@ button:hover svg {
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 80vh;
+    max-height: 100%;
 }
 
 /* <--Contact--> */
@@ -355,7 +356,7 @@ button:hover svg {
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 80vh;
+    max-height: 100%;
 }
 
 /* <--Joke for on the 404 page--> */
@@ -365,7 +366,7 @@ button:hover svg {
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 80vh;
+    max-height: 100%;
 }
 
 .joke p {
@@ -388,7 +389,7 @@ button:hover svg {
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 80vh;
+    max-height: 100%;
 }
 
 .counter h3 {
