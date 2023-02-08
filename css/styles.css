@@ -190,6 +190,7 @@ button:hover svg {
     right: 0;
     bottom: 10vh;
     margin: auto;
+    cursor: pointer;
 }
 
 .indicator:before {
