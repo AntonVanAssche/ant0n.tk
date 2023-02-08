@@ -11,6 +11,44 @@
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body id="top">
+        <nav>
+            <div id="menu">
+                <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li>
+                            <a
+                                onClick="document.getElementById('about').scrollIntoView()"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onClick="document.getElementById('projects').scrollIntoView()"
+                                >Projects</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onClick="document.getElementById('contact').scrollIntoView()"
+                                >Contact</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onClick="document.getElementById('bored').scrollIntoView()"
+                                >Bored?</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bg" id="menu-bg"></div>
+        </nav>
         <main>
             <section id="greetings">
                 <div class="content-wrapper">
@@ -378,6 +416,7 @@
                 >.
             </p>
         </footer>
+        <script src="./js/nav.js"></script>
         <script src="./js/theme.js"></script>
         <script src="./js/bored.js"></script>
     </body>
