@@ -11,44 +11,48 @@
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body id="top">
-        <nav>
+        <header>
             <div id="menu">
-                <div id="menu-bar" onclick="menuOnClick()">
+                <button id="menu-bar" onclick="menuOnClick()">
                     <div id="bar1" class="bar"></div>
                     <div id="bar2" class="bar"></div>
                     <div id="bar3" class="bar"></div>
-                </div>
+                </button>
                 <nav class="nav" id="nav">
                     <ul>
                         <li>
-                            <a
+                            <button
                                 onClick="document.getElementById('about').scrollIntoView()"
-                                >About</a
                             >
+                                About
+                            </button>
                         </li>
                         <li>
-                            <a
+                            <button
                                 onClick="document.getElementById('projects').scrollIntoView()"
-                                >Projects</a
                             >
+                                Projects
+                            </button>
                         </li>
                         <li>
-                            <a
+                            <button
                                 onClick="document.getElementById('contact').scrollIntoView()"
-                                >Contact</a
                             >
+                                Contact
+                            </button>
                         </li>
                         <li>
-                            <a
+                            <button
                                 onClick="document.getElementById('bored').scrollIntoView()"
-                                >Bored?</a
                             >
+                                Bored?
+                            </button>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div class="menu-bg" id="menu-bg"></div>
-        </nav>
+        </header>
         <main>
             <section id="greetings">
                 <div class="content-wrapper">

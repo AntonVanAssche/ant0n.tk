@@ -108,15 +108,18 @@ a {
     text-decoration: underline;
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: var(--accent-color);
 }
 
-a:hover svg {
+a:hover svg,
+a:focus svg {
     stroke: var(--accent-color);
 }
 
-button:hover svg {
+button:hover svg,
+button:focus svg {
     stroke: var(--accent-color);
 }
 
@@ -136,7 +139,8 @@ button:hover svg {
     height: 40px;
 }
 
-.back-to-top:hover {
+.back-to-top:hover,
+.back-to-top:focus {
     stroke: var(--accent-color);
     border-color: var(--accent-color);
     background-color: var(--button-background-color);
@@ -158,7 +162,8 @@ button:hover svg {
     height: 40px;
 }
 
-.darkmode-toggle:hover {
+.darkmode-toggle:hover,
+.darkmode-toggle:focus {
     stroke: var(--accent-color);
     border-color: var(--accent-color);
     background-color: var(--button-background-color);
@@ -233,6 +238,8 @@ button:hover svg {
     height: 40px;
     margin: 30px 0 20px 20px;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .bar {
@@ -266,15 +273,18 @@ button:hover svg {
     padding: 12px 0;
 }
 
-.nav li a {
+.nav li button {
     color: var(--text-color);
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
-.nav li a:hover {
+.nav li button:hover,
+.nav li button:focus {
     font-weight: 800;
     font-size: 22px;
     color: var(--accent-color);
@@ -349,10 +359,6 @@ button:hover svg {
 .content-wrapper .lead {
     font-size: 2rem;
     font-weight: 600;
-}
-
-.content-wrapper .lead img {
-    height: 1em;
 }
 
 .greetings-name {
@@ -514,7 +520,8 @@ button:hover svg {
     cursor: pointer;
 }
 
-.counter button:hover {
+.counter button:hover,
+.counter button:focus {
     background-color: var(--button-background-color-hover);
     color: var(--accent-color);
     border: 2px var(--accent-color) solid;
@@ -544,7 +551,8 @@ button:hover svg {
     margin: 0.5rem 0.5rem;
 }
 
-.social-icon:hover {
+.social-icon:hover,
+.social-icon:focus {
     stroke: var(--accent-color);
     border-color: var(--accent-color);
     background-color: var(--button-background-color);
