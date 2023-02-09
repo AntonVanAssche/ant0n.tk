@@ -234,6 +234,10 @@ button:focus svg {
 }
 
 /* <-- Navbar --> */
+header {
+    position: fixed;
+}
+
 #menu {
     z-index: 2;
 }
