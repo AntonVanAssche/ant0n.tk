@@ -106,6 +106,7 @@ svg {
 a {
     color: var(--text-color);
     text-decoration: underline;
+    outline-color: transparent !important;
 }
 
 a:hover,
@@ -116,6 +117,10 @@ a:focus {
 a:hover svg,
 a:focus svg {
     stroke: var(--accent-color);
+}
+
+button {
+    outline-color: transparent !important;
 }
 
 button:hover svg,
@@ -242,10 +247,19 @@ button:focus svg {
     border: none;
 }
 
+#menu-bar:hover #bar1,
+#menu-bar:hover #bar2,
+#menu-bar:hover #bar3,
+#menu-bar:focus #bar1,
+#menu-bar:focus #bar2,
+#menu-bar:focus #bar3 {
+    background-color: var(--accent-color);
+}
+
 .bar {
     height: 5px;
     width: 100%;
-    background-color: var(--accent-color);
+    background-color: var(--text-color);
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
