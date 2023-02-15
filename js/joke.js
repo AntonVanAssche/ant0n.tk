@@ -4,7 +4,7 @@
 const getData = async () => {
     try {
         // Fetch the joke from the API.
-        const response = await fetch("https://v2.jokeapi.dev/joke/Any");
+        const response = await fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit");
 
         // If the response is not OK, throw an error.
         if (!response.ok)
