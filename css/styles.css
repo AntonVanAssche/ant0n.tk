@@ -2,38 +2,20 @@
 
 /* <--Color scheme--> */
 :root {
-    /* <--General scheme--> */
-
-    /* <--Background--> */
     --background-color1: #141414;
     --background-color2: #222222;
     --button-background-color: #222222;
-
-    /* <--Text--> */
     --text-color: #d3d3d3;
-
-    /* <--Links--> */
     --accent-color: #fdca63;
-
-    /* <--Error--> */
     --error-color: #e06c75;
 }
 
 .lightmode {
-    /* <--General scheme--> */
-
-    /* <--Background--> */
     --background-color1: #f5f5f5;
     --background-color2: #ffffff;
     --button-background-color: #ffffff;
-
-    /* <--Text--> */
     --text-color: #141414;
-
-    /* <--Links--> */
     --accent-color: #fdca63;
-
-    /* <--Error--> */
     --error-color: #e06c75;
 }
 
@@ -74,7 +56,6 @@
 }
 
 html {
-    height: 100%;
     scroll-behavior: smooth;
 }
 
@@ -86,11 +67,6 @@ body {
 
     display: grid;
     grid-template-rows: 1fr auto;
-    height: 100%;
-}
-
-main {
-    height: 100%;
 }
 
 svg {
@@ -109,13 +85,11 @@ a {
     outline-color: transparent !important;
 }
 
-a:hover,
-a:focus {
+a :is(:hover, :focus) {
     color: var(--accent-color);
 }
 
-a:hover svg,
-a:focus svg {
+a:is(:hover, :focus) svg {
     stroke: var(--accent-color);
 }
 
@@ -123,8 +97,7 @@ button {
     outline-color: transparent !important;
 }
 
-button:hover svg,
-button:focus svg {
+button:is(:hover, :focus) svg {
     stroke: var(--accent-color);
 }
 
@@ -144,13 +117,6 @@ button:focus svg {
     height: 40px;
 }
 
-.back-to-top:hover,
-.back-to-top:focus {
-    stroke: var(--accent-color);
-    border-color: var(--accent-color);
-    background-color: var(--button-background-color);
-}
-
 /* <--Darkmode toggle--> */
 .darkmode-toggle {
     position: fixed;
@@ -167,8 +133,8 @@ button:focus svg {
     height: 40px;
 }
 
-.darkmode-toggle:hover,
-.darkmode-toggle:focus {
+.back-to-top:is(:hover, :focus),
+.darkmode-toggle:is(:hover, :focus) {
     stroke: var(--accent-color);
     border-color: var(--accent-color);
     background-color: var(--button-background-color);
@@ -252,12 +218,7 @@ header {
     border: none;
 }
 
-#menu-bar:hover #bar1,
-#menu-bar:hover #bar2,
-#menu-bar:hover #bar3,
-#menu-bar:focus #bar1,
-#menu-bar:focus #bar2,
-#menu-bar:focus #bar3 {
+#menu-bar:is(:hover, :focus) :is(#bar1, #bar2, #bar3, #bar1, #bar2, #bar3) {
     background-color: var(--accent-color);
 }
 
@@ -302,8 +263,7 @@ header {
     border: none;
 }
 
-.nav li button:hover,
-.nav li button:focus {
+.nav li button:is(hover, :focus) {
     font-weight: 800;
     font-size: 22px;
     color: var(--accent-color);
@@ -364,7 +324,22 @@ header {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    max-height: 200vh;
+    max-height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-height: 100%;
+}
+
+.content-left {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-title {
@@ -453,53 +428,8 @@ header {
     }
 }
 
-/* <--About--> */
-.about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    max-height: 100%;
-}
-
-.about-left {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* <--Projects--> */
-.projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    max-height: 100%;
-}
-
-/* <--Contact--> */
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    max-height: 100%;
-}
-
 /* <--Joke for on the 404 page--> */
-.joke {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    max-height: 100%;
-}
-
-.joke p {
+.joke-content {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 1rem 0;
@@ -513,22 +443,13 @@ header {
 }
 
 /* <--Counter--> */
-.counter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    max-height: 100%;
-}
-
-.counter h3 {
+#count {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 1rem 0;
 }
 
-.counter button {
+#bored-button {
     background-color: var(--button-background-color);
     color: var(--text-color);
     border: 2px var(--text-color) solid;
@@ -539,8 +460,7 @@ header {
     cursor: pointer;
 }
 
-.counter button:hover,
-.counter button:focus {
+#bored-button:is(:hover, :focus) {
     background-color: var(--button-background-color-hover);
     color: var(--accent-color);
     border: 2px var(--accent-color) solid;
@@ -570,8 +490,7 @@ header {
     margin: 0.5rem 0.5rem;
 }
 
-.social-icon:hover,
-.social-icon:focus {
+.social-icon:is(:hover, :focus) {
     stroke: var(--accent-color);
     border-color: var(--accent-color);
     background-color: var(--button-background-color);
@@ -579,40 +498,20 @@ header {
 
 /* <--Addaptive shit--> */
 @media (max-width: 992px) {
-    .about {
+    .content {
         width: 80%;
     }
 
-    .projects {
-        width: 80%;
-    }
-
-    .contact {
-        width: 80%;
-    }
-
-    .fencing {
-        width: 80%;
-    }
-
-    .joke {
-        width: 80%;
-    }
-
-    .joke .joke-content {
+    .joke-content {
         font-size: 0.8rem;
         font-weight: 600;
     }
 
-    .counter {
-        width: 80%;
-    }
-
-    .counter button {
+    .bored-button {
         font-size: 0.8rem;
     }
 
-    .counter h3 {
+    .count {
         font-size: 1rem;
     }
 }
