@@ -99,6 +99,7 @@ window
         let darkMode = localStorage.getItem("darkMode");
         if (darkMode === "system") {
             e.matches ? setDarkMode() : unsetDarkMode();
+            localStorage.setItem("darkMode", "system");
             updateButton();
         }
     });
