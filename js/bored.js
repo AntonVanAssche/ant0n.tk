@@ -5,7 +5,7 @@
 let count = localStorage.getItem("count") || 0;
 
 const playHitmarkerSound = async () => {
-    const audio = new Audio("./audio/hitmarker.mp3");
+    const audio = new Audio("/assets/audio/hitmarker.mp3");
     audio.play();
 };
 
