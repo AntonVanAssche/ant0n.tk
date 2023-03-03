@@ -48,3 +48,7 @@ const countUp = () => {
 
 // Event listener for the button
 document.getElementById("bored-button").addEventListener("click", countUp);
+
+
+
+// CTF Hint: no external tools are needed to complete it as everything is there in the code.
