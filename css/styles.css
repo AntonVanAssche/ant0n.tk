@@ -496,6 +496,14 @@ header {
     background-color: var(--button-background-color);
 }
 
+/* <--Capture the flag--> */
+#ctf {
+    display: none;
+}
+/*
+ * You might need to decode the flag multiple times to get the result.
+*/
+
 /* <--Addaptive shit--> */
 @media (max-width: 992px) {
     .content {
