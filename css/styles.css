@@ -263,7 +263,7 @@ header {
     border: none;
 }
 
-.nav li button:is(hover, :focus) {
+.nav li button:is(:hover, :focus) {
     font-weight: 800;
     font-size: 22px;
     color: var(--accent-color);
